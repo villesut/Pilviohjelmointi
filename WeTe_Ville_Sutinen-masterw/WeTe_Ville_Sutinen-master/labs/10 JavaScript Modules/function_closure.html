@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Click me!</title>
+<style> 
+	body, button { margin: 10px; } 
+	div { padding: 10px; }
+</style>
+<script>
+
+/*
+//
+// The version without the closure...
+//
+var count = 0;
+window.onload = function() {
+	var button = document.getElementById("clickme");
+	button.onclick = handleClick;
+};
+
+function handleClick() {
+	var message = "You clicked me ";
+	var div = document.getElementById("message");
+	count++;
+	div.innerHTML = message + count + " times!";
+}
+*/
+
+//
+// The version with the closure.
+//
+window.onload = function() {
+	var count = 0; 
+	var message = "You clicked me ";
+	var div = document.getElementById("message");
+
+	var button = document.getElementById("clickme");
+	button.onclick = function() {
+		count++;
+		div.innerHTML = message + count + " times!";
+	};
+};
+
+window.onload = function(){
+	var speed = 0;
+	var message = "Playback speed ";
+	var div = document.getElementById("playback-speed");
+	
+	var button = document.getElementById("slower");
+	button.onclick = function(){
+		speed--;
+		div.innerHTML = message + speed;
+	};
+	var button1 = document.getElementById("faster");
+	button1.onclick = function(){
+		speed++;
+		div.innerHTML = message + speed;
+	};
+	var button2 = document.getElementById("reset");
+	button2.onclick = function(){
+	speed = 0;
+	div.innerHTML = message + speed;
+	};
+};
+
+</script> 
+</head> 
+<body>
+	<div id="playback-speed"></div>
+	<button id="slower">Slower - </button>
+	<button id="faster">Faster + </button>
+	<button id="reset">Reset 0 </button>
+	
+	<br><br><br>
+	<button id="clickme">Click me!</button>
+	<div id="message"></div>
+</body>
+</html>
+

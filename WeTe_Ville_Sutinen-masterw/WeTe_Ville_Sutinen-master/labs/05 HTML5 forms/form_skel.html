@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--
+	This page demonstrates a form.
+	-->
+	<head>
+    <link href="form.css" type="text/css" rel="stylesheet" />
+		<meta charset="utf-8"/>
+		<title>Demonstrating HTML forms</title>
+	</head>
+	
+	<body>
+		<h1>Turnitin</h1>
+		
+		<form  lang="fi" action="">
+			
+		<fieldset class="account">
+			<legend>Account</legend>
+			<div>
+				Name: <input type="text" name="studentname" placeholder="Your name here" required/> <!--onInvalid="this.set.CustomValidity('Fill the form')" oninput=setCustomValidity('')-->
+			</div>
+			<div>
+				Student id: <input type="text" pattern="\d{7}" name="id" placeholder="Your id here"  required/>
+			</div>
+			<div>
+				Email:
+				<input type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" name="email" placeholder="your email"/>
+				<!--
+				Make an input named "email"
+				-->
+			</div>
+			
+			<div>
+				Assignment:
+				<input type="assignment" name="assignment" placeholder="Write the assignment" onInvalid="this.set.CustomValidity('Fill the form')" oninput=setCustomValidity('')/>
+				<!--
+				Make an input named "assignment"
+				-->
+				
+			</div></fieldset><br>
+<fieldset class="account"><legend>Code</legend>
+			<div>
+				Code:
+				<textarea type="code" name="code" placeholder="code example" onInvalid="this.set.CustomValidity('Fill the form')" oninput=setCustomValidity('')></textarea>
+				<!--
+				Make an input named "code" which is a text area to put student's code into.
+				-->
+				
+			</div>
+			</fieldset><br>
+			<fieldset class="account"><legend>Other</legend>
+			<div>
+			<label>	Cheat:
+				<input type="checkbox" name="cheat"/></label>
+			<!--
+				Make an input named "cheat" which is a check box the student must check.
+			-->
+			</div>
+			<div>
+				<label>payment</label><br>
+				<input type="radio" name="payment" value="visa" >Visa
+				
+				<input type="radio" name="payment" value="paypal" checked>Paypal
+				
+				<input type="radio" name="payment" value="mastecard">MasterCard
+				
+			<!--
+				Make an input named "payment" which is a radio box with possible values of visa, paypal, mastercard
+			-->
+			</div>
+			<div>
+				Score:
+				<label>Score</label><br>
+				<select name="score">
+					<option value="1">1</option>
+					
+					<option value="2">2</option>
+					
+					<option value="3">3</option>
+					
+					
+					
+				</select>
+			<!--
+				Make an input named "score" which is a list of choices for the score 
+			-->
+			</div>
+			
+			<input type="submit" />
+			</fieldset><br>
+		</form>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">Validate</a>
+	</body>
+</html>

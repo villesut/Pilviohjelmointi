@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Map Coordinates</title>
+  <script>
+	window.onload = init;
+	function init() {
+		var map = document.getElementById("map");
+		map.onmousemove = showCoords;
+		var mydiv = document.getElementById("mydiv");
+		mydiv.onclick = addtext;
+		makeUL();
+	}
+	
+	function showCoords(eventObj) {
+		var coords = document.getElementById("coords");
+		var x = eventObj.clientX;
+		var y = eventObj.clientY;
+		coords.innerHTML = "Map coordinates: " + x + ", " + y;
+	}
+
+	function addtext(){
+		if (document.createTextNode){
+			var textToAdd = " Div was clicked! ";
+			var newNode = document.createTextNode(textToAdd);
+			document.getElementById("mydiv").appendChild(newNode);
+		} else {
+			alert("Looks like you have an old browser!");
+		}
+	}
+
+function makeUL() {												
+	var array = ["asd","qwe","zxc"];															
+    var test = document.createElement('section');
+    test.setAttribute('id','test')
+    var ul =document.createElement('ul');
+    
+    document.body.appendChild(test);
+    test.appendChild(ul);
+																		
+    for(var i = 0; i < array.length; i++) {							
+    														
+        var li = document.createElement('li');					
+					ul.appendChild(li);
+					li.innerHTML=li.innerHTML + array[i];	
+    }																	
+}	
+
+
+  </script>
+</head>
+<body>
+	<img id="map" src="data/map.jpg">
+	<p id="coords">Move mouse over map to find coordinates...</p>
+	<div id="mydiv" style="border:1px solid red">I am a DIV! Click me.</div>
+	<div id="foo"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+table{
+    table-layout: fixed;
+    font-family: Arial;
+    width: 100%;
+    white-space: nowrap;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    
+    border-spacing: 0;
+}
+
+caption{
+    font-weight: bold;
+    border: 1px solid grey;
+    
+    
+}
+
+
+.ylin{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.keski{
+    background-color: rgb(224,224,224);
+}
+.joku{
+    font-weight: bold;
+    border-right: 1px solid grey;
+}
+.joku2{
+    background-color: rgb(224,224,224);
+    font-weight: bold;
+    border-right: 1px solid grey;
+}
+.joku3{    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-right: 1px solid grey;
+}

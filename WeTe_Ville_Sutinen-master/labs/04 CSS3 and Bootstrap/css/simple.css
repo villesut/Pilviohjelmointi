@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Verdana, sans-serif;
+    background-color:#FFCCCC; 
+    
+}
+h1, h2{
+    color: rgba(65,105,225,0.7);
+    font-weight: bold;
+    font-size: 4.0em;
+}
+ul, ol{
+    font-size: 0.8em;
+}
+li{
+    color: rgb(255, 102, 255);
+    width: 500px;
+    padding: 10px;
+
+    border: 2px solid darkgrey;
+    margin: 0;
+    text-indent: 40px;
+}
+p{
+    text-indent: 50px;
+}
+figcaption{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+p.copyright_notice {
+    font-size: 0.8em;
+}
+p.basic{
+    padding: 40px;
+    border: 3px solid black;
+    
+}
+p.joku{
+    text-indent: 0px;
+}
+p::first-letter {
+    font-size:8em;
+}
+
+p::first-line {
+    font-weight: bold;
+}

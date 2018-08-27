@@ -1,0 +1,21 @@
+h1 {
+	color: red;
+}
+
+
+table{
+    color: red;
+
+}
+
+td{
+    padding-left: 5px;
+    border: 2px solid black;
+    border-spacing: 0px;
+}
+th{
+    border: 2px solid black;
+}
+body{
+    font-family: arial;
+}
