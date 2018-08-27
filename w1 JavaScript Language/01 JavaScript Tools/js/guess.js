@@ -1,6 +1,6 @@
 var attempts = 1;
 let targetNumber = Math.floor(Math.random() * 10) + 1;
-console.log(targetNumber);
+console.log('Answer: ' + targetNumber);
 
 var submit = document.getElementById('submit'),
 	guess = document.getElementById('guess'),
