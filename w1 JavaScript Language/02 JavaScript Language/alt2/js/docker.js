@@ -1,20 +1,42 @@
 // koodi:
 
+class Stuff {
+	constructor(name, weight) {
+		this.name = name;
+		this.weight = this.weight;
+	}
+}
+
 class Bag {
 	constructor(maxWeight) {
 		this.items = [];
 		this.maxWeight = maxWeight;
 	}
 	add(item) {
-		this.items.push(item);
+		if (item instanceof Stuff && !this.items.includes(item) && this.weight() + item.weight <= this.maxWeight) {
+			this.items.push(item);
+		}
 	}
 	weight() {
-		this.maxWeight = this.maxWeight - item.weight;
+		return this.items.map(item => item.weight).reduce((total, itemWeight) => (total += itemWeight), 0);
 	}
 }
 
 class Cargo {
-	constructor(maxWeight) {}
+	constructor(maxWeight) {
+		this.Cargo = [];
+		this.maxWeight = maxWeight;
+	}
+
+	add(bag) {
+		if (bag instanceof Bag && !this.cargo.includes(bag) && this.weight() + bag.weight() <= this.maxWeight) {
+			this.cargo.push(bag);
+		}
+	}
+
+	weight() {
+		return this.cargo.map(bag => bag.weight()).reduce((total, bagWeight) => (total += bagWeight), 0);
+	}
 }
 
 var stone = new Stuff('stone', 3);
