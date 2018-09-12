@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <title>W02 01/Asynch TODO 1</title>
+       
+    </head>
+    <body>
+        <h1>TODO 1</h1>
+        <div>
+        <div id="klik">Klikkaa mua!</div>
+        <div></div>
+        <div><p id="klik2">Hover me!</p></div>
+        </div>
+        <div id="demo"></div>   
+        <div id="mouse"></div> 
+
+        <script>
+            document.getElementById("klik").addEventListener("click", doMagic);
+            document.getElementById("klik2").addEventListener("mouseover", doScience);
+            function doMagic(){
+                document.getElementById("demo").innerHTML = alert("klikattu");
+            }
+
+            function doScience(){
+                document.getElementById("mouse").innerHTML = alert("mouseover");
+            }
+            </script>
+
+    </body>
+</html>
